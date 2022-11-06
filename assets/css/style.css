@@ -1,0 +1,418 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --main-color:#fd4646;
+    --text-color:#171427;
+    --bg-color:#FFFf;
+}
+.home{
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    background: #d6d6d6;
+    padding-bottom: 0%;
+   
+}
+.home img{
+    width: 750px; 
+    height: 750px;
+}
+.teks h4{
+    padding-top: 145px;
+}
+.home .teks h1 {
+    font-size: 75px;
+    
+}
+.home .teks  h4, .teks h5, .teks h1{   
+    padding-left: 180px;
+  
+    font-family: 'Bebas Neue', cursive;
+}
+.home .teks  h4, .teks h5{   
+   font-size:larger;
+}
+.btn{
+    display: inline-block;
+    border-radius: 6px;
+    background: #92928ba5;
+    padding: .7rem 2rem;
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 180px;
+}
+.btn:hover{
+    color: burlywood;
+}
+.slider .slick-slide img {
+    width: 100%;
+    position: relative;
+    
+}
+.slider{
+padding-top: 0%;
+padding-bottom: 0%;
+    
+}
+img{
+    width: 100%;
+}
+/*header*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bg-color);
+    box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+    z-index: 100;
+
+}
+.container{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.logo, .login{
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+.menu a, .menu i{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 400px;
+   
+}
+.menu a:hover, .menu i:hover, .logo1 .login:hover{
+    background: rgb(175, 172, 191);
+    border-radius: 15px;
+}
+#cart-icon{
+    font-size: 1rem;
+    cursor: pointer;
+}
+section{
+    padding: 4rem 0 3rem;
+
+}
+.cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg-color);
+    box-shadow: -2px 0 4px hsl(0 4% 15% /10%);
+    transition: 0.3s;
+}
+.cart.active{
+right: 0;
+}
+.cart-title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+}
+.cart-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+
+}
+.cart-product-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.cart-price{
+    font-weight: 500;
+}
+.cart-quantity{
+    border: 1px solid var(--text-color);
+    outline-color: var(--main-color);
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.cart-remove{
+    font-size: 24px;
+    color: var(--main-color);
+    cursor: pointer;
+
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--text-color) ;
+}
+.total-title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.total-price{
+    margin-left: 0.5rem;
+}
+.btn-buy{
+    display: flex;
+    margin:1.5rem auto 0 auto;
+    padding:12px 20px;
+    border: none;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+#close-cart{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+.section-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+}
+
+.shop{
+margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #ebebeb;
+    margin-bottom: 50px;
+    border-radius: 2%;
+}
+.shop-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+    gap: 1.5rem;
+}
+.product-box{
+    position: relative;
+}
+.product-box:hover{
+    padding: 10px;
+    border: 1px solid black;
+    transition: 0.4s;
+}
+.product-img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+.product-title{
+   
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+.price{
+    font-weight: 500;
+}
+.add-cart{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 10px;
+    cursor: pointer;
+}
+.add-cart:hover{
+    background: rgb(175, 172, 191);
+}
+.kontak{
+    position: relative;
+    width: 1440px;
+    height: 846px;
+    left: 0px;
+    background: #D4D3D1;
+    width: 100%;
+    }
+    
+    .kontakBox{
+    position: relative;
+    width: 450px;
+    height: 450px;
+    left: 88px;
+    top: 50px;
+    background: #989090;
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    }
+    .form1{
+        position: absolute;
+        padding-left: 80px;
+        padding-top: 50px;
+    }
+   
+    .nama,.email,.nohp{
+        height: 53px;
+    }
+    .nama,.email,.nohp,.pesan{
+        width: 300px;
+        height: 30px;
+        background: #F9F6F6;
+    border-radius: 5px;
+   padding-left: 15px;
+    }
+    .tombol{
+        width: 100px;
+        height: 40px;
+        background: #fffffe;
+        border-radius: 10%;
+    }
+    .pesan{
+    height: 120px;
+    top: 3184px;
+    }
+    .kontak img{
+    position: absolute;
+    width: 723px;
+    height: 845px;
+    left: 750px;
+    top: 0%;
+    }
+    .kontak p{
+    position: relative;
+    z-index: 99;
+    align-items: center;
+    text-align: center;
+    font-family: 'Readex Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    top: 10px;
+    }
+    .info{
+        position: relative;
+        width: 100%;
+        background: linear-gradient(to right, #b5b4b4,#f6f3ef);
+        height: 450px;
+    }
+    .info1, .pembayaran,.infokontak{
+        top: 3955px;
+    }
+    .info1{
+    width: 380px;
+    height: 171px;
+    left: 88px;
+    padding-left: 55px;
+    }
+    .info1 h1{
+    font-family: 'Readex Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    }
+    .info1 p{
+    width: 380px;
+    height: 90px;
+    font-family: 'Readex Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    }
+    .pembayaran {
+    width: 224.33px;
+    height: 119px;
+    left: 624px;
+    margin-left: 70px;
+    }
+    .pembayaran img{
+    width: 86px;
+    height: 49px;
+    left: 628px;
+    
+    }
+    .infokontak{
+    width: 339px;
+    height: 94px;
+    left: 1022px;
+    }
+    .infokontak p{
+    font-family: 'Readex Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    }
+    .content1{
+        display: flex;
+        gap: 100px;
+        padding-left: 120px;
+        padding-top: 40px;
+    }
+    .content2{
+    display: flex;
+    width: 275px;
+    height: 72px;
+    padding-left: 120px;
+    padding-top: 70px;
+    }
+    .content2 img{
+    width: 120px;
+
+    left: 107px;
+    padding-left: 55px;
+    }
+    .join h3{
+        text-align: center;
+        padding-top: 60px;
+    }
+    .form{
+        margin-top: 20px;
+        margin-left: 33%;
+        padding-left: 50px;
+    }
+    .join{
+        position: relative;
+        height: 300px;
+        background: linear-gradient(to right, #b5b4b4,#f6f3ef);
+    }
+    footer{
+        height: 75px;
+        background: #D4D3D1;
+    }
